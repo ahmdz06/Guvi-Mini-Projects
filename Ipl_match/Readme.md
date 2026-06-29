@@ -29,11 +29,11 @@ The project should demonstrate the complete Data Science workflow, including:
 
 The final submission should include a well-documented Python codebase, detailed analytical findings, and a prediction system capable of forecasting IPL match outcomes.
 
-Dataset Description
+## Dataset Description
 
 Two datasets were used for this project.
 
-1. Matches Dataset
+## 1. Matches Dataset
 
 The matches dataset contains match-level information.
 
@@ -56,7 +56,8 @@ Team analysis
 Toss analysis
 Seasonal analysis
 Machine Learning model development
-2. Deliveries Dataset
+
+## 2. Deliveries Dataset
 
 The deliveries dataset contains ball-by-ball information for every IPL match.
 
@@ -84,7 +85,8 @@ Technologies and Libraries Used
 
 The following Python libraries were used during the development of this project.
 
-Library	Purpose
+## Library	Purpose
+
 Pandas	Data manipulation and preprocessing
 NumPy	Numerical operations
 Matplotlib	Data visualization
@@ -95,7 +97,7 @@ Project Workflow
 
 The entire project was carried out in multiple stages.
 
-Stage 1: Data Collection and Loading
+## Stage 1: Data Collection and Loading
 
 Initially, the IPL datasets were imported into the Jupyter Notebook environment using Pandas.
 
@@ -113,7 +115,7 @@ After loading, the structure of the datasets was explored using:
 
 This helped in understanding the dimensions, attributes, and datatypes present in the datasets.
 
-Stage 2: Data Cleaning and Preprocessing
+## Stage 2: Data Cleaning and Preprocessing
 
 Data cleaning is one of the most important stages in any Data Science project.
 
@@ -137,13 +139,13 @@ duplicated().sum()
 
 Any duplicate entries found were removed to avoid biased analysis.
 
-Stage 3: Exploratory Data Analysis (EDA)
+## Stage 3: Exploratory Data Analysis (EDA)
 
 Exploratory Data Analysis was performed to understand the underlying patterns present in the IPL dataset.
 
 Several visualizations were created using Matplotlib, Seaborn, and Plotly.
 
-Seasonal Analysis
+## Seasonal Analysis
 
 The number of matches played in each IPL season was analyzed.
 
@@ -151,7 +153,8 @@ Purpose:
 
 To understand how the tournament expanded over time.
 To identify seasons with the highest number of matches.
-Team Performance Analysis
+
+## Team Performance Analysis
 
 The overall performance of IPL teams was analyzed by calculating the total number of matches won by each team.
 
@@ -167,14 +170,16 @@ This analysis was performed to determine:
 
 Which decision is preferred more frequently.
 Whether toss decisions significantly affect match outcomes.
-Toss Winner vs Match Winner Analysis
+
+## Toss Winner vs Match Winner Analysis
 
 A new feature was created to determine whether the team winning the toss also won the match.
 
 Purpose:
 
 To evaluate the actual influence of toss results on match outcomes.
-Top Batsmen Analysis
+
+## Top Batsmen Analysis
 
 Using the deliveries dataset, total runs scored by each batsman were calculated.
 
@@ -182,14 +187,16 @@ Purpose:
 
 To identify the highest run scorers in IPL history.
 To study batting consistency.
-Top Bowlers Analysis
+
+## Top Bowlers Analysis
 
 Wicket information was extracted from the deliveries dataset.
 
 Purpose:
 
 To determine the most successful bowlers in IPL history.
-Boundary Analysis
+
+## Boundary Analysis
 
 Two separate analyses were performed:
 
@@ -200,6 +207,7 @@ Players who hit the highest number of sixes were identified.
 Purpose:
 
 To identify aggressive power hitters.
+
 Most Fours
 
 Players with the highest number of boundaries were analyzed.
@@ -207,7 +215,8 @@ Players with the highest number of boundaries were analyzed.
 Purpose:
 
 To identify technically sound batsmen capable of maintaining scoring momentum.
-Strike Rate Analysis
+
+## Strike Rate Analysis
 
 Strike rate was calculated using:
 
@@ -218,39 +227,44 @@ Only batsmen with at least 1000 IPL runs were considered to avoid small sample b
 Purpose:
 
 To compare scoring efficiency among established batsmen.
-Orange Cap Analysis
+
+## Orange Cap Analysis
 
 Season-wise highest run scorers were identified.
 
 Purpose:
 
 To determine batting dominance across different IPL seasons.
-Purple Cap Analysis
+
+## Purple Cap Analysis
 
 Season-wise highest wicket takers were identified.
 
 Purpose:
 
 To analyze bowling dominance across IPL seasons.
-Super Over Analysis
+
+## Super Over Analysis
 
 Matches involving Super Overs were analyzed.
 
 Purpose:
 
 To study the occurrence of highly competitive matches.
-Umpire Analysis
+
+## Umpire Analysis
 
 The frequency of umpire appearances was analyzed.
 
 Purpose:
 
 To identify the most experienced IPL umpires.
-Stage 4: Machine Learning Model Development
+
+## Stage 4: Machine Learning Model Development
 
 After completing EDA, a Machine Learning model was developed to predict IPL match winners.
 
-Feature Selection
+## Feature Selection
 
 The following features were selected:
 
@@ -260,13 +274,13 @@ Toss Winner
 Toss Decision
 Venue
 
-Target Variable:
+## Target Variable:
 
 Winner
 
 These features were selected because they directly influence match outcomes.
 
-Encoding Categorical Variables
+## Encoding Categorical Variables
 
 Since Machine Learning algorithms cannot process textual information directly, Label Encoding was used to convert categorical values into numerical form.
 
@@ -285,18 +299,19 @@ Purpose:
 
 Training data was used for learning patterns.
 Testing data was used for evaluating model performance on unseen matches.
-Machine Learning Models Used
+
+## Machine Learning Models Used
 
 Two classification algorithms were implemented.
 
-1. Logistic Regression
+## 1. Logistic Regression
 
 Logistic Regression was used as a baseline classification model.
 
 Accuracy Achieved:
 
 23.8%
-2. Random Forest Classifier
+## 2. Random Forest Classifier
 
 Random Forest was implemented because it can capture complex non-linear relationships and generally performs well on categorical datasets.
 
@@ -306,7 +321,7 @@ Accuracy Achieved:
 
 After comparing both models, Random Forest was selected as the final prediction model.
 
-Winner Prediction Module
+## Winner Prediction Module
 
 The final system allows users to provide:
 
@@ -318,7 +333,7 @@ Venue
 
 The trained Random Forest model processes these inputs and predicts the probable winner of the IPL match.
 
-Key Findings
+## Key Findings
 Most IPL teams prefer to field first after winning the toss.
 Winning the toss alone does not guarantee match victory.
 Mumbai Indians and Chennai Super Kings have consistently performed well.
